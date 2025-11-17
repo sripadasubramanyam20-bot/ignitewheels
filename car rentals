@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ignite Wheels Car Rental</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.3);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 2px 2px 8px #000;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .cars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .car-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .car-card:hover {
+      transform: scale(1.03);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .car-info {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .btn {
+      background: #ff4d00;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex; align-items:center; gap:20px;">
+      <img src="data:image/jpeg;base64,{{DATA}}" alt="Ignite Wheels Logo" style="height:90px;" />
+    </div>
+    <nav>
+      <a href="#home" style="color:#fff; margin-right:20px; text-decoration:none; font-size:18px;">Home</a>
+      <a href="#cars" style="color:#fff; margin-right:20px; text-decoration:none; font-size:18px;">Cars</a>
+      <a href="#contact" style="color:#fff; text-decoration:none; font-size:18px;">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="home" style="margin-top:140px;">Your Perfect Ride Awaits</div>
+
+  <!-- Car Slider Section -->
+  <section class="section" id="sliderSection">
+    <h2>Featured Cars</h2>
+
+    <div class="slider" style="width:90%; margin:20px auto; overflow:hidden; position:relative; border-radius:15px;">
+      <div class="slides" style="display:flex; width:500%; animation:slide 12s infinite;">
+
+        <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023" style="width:100%; height:350px; object-fit:cover;" alt="Thar" />
+        <img src="https://images.unsplash.com/photo-1617814076517-fb5b7a78d83c" style="width:100%; height:350px; object-fit:cover;" alt="XUV" />
+        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea" style="width:100%; height:350px; object-fit:cover;" alt="Swift" />
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" style="width:100%; height:350px; object-fit:cover;" alt="Baleno" />
+
+      </div>
+    </div>
+
+    <style>
+      @keyframes slide {
+        0% { transform: translateX(0); }
+        20% { transform: translateX(0); }
+        25% { transform: translateX(-100%); }
+        45% { transform: translateX(-100%); }
+        50% { transform: translateX(-200%); }
+        70% { transform: translateX(-200%); }
+        75% { transform: translateX(-300%); }
+        95% { transform: translateX(-300%); }
+        100% { transform: translateX(0); }
+      }
+    </style>
+
+  </section>
+
+  <section class="section">
+    <h2>Our Top Cars</h2>
+    <div class="cars">
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1617814076517-fb5b7a78d83c" />
+        <div class="car-info">
+          <h3>Hyundai Creta</h3>
+          <p>Comfortable, Stylish & Best for Trips</p>
+          <input type="date" placeholder="Date of Booking" style="padding:12px; border-radius:6px; border:none;" />
+        <button class="btn" style="transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">Book Now</button>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023" />
+        <div class="car-info">
+          <h3>Mahindra Thar</h3>
+          <p>Adventure Ready Beast</p>
+          <button class="btn" style="transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">Book Now</button>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea" />
+        <div class="car-info">
+          <h3>Swift Dzire</h3>
+          <p>Budget Friendly & Best Mileage</p>
+          <button class="btn" style="transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">Book Now</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section (Upgraded to Animated Slider) -->
+  <section class="section" id="reviews" style="background:#0f0f0f; color:#fff; padding:50px; position:relative; overflow:hidden;">
+    <h2 style="font-size:32px; margin-bottom:30px;">What Our Customers Say</h2>
+
+    <div class="review-slider" style="width:100%; overflow:hidden; position:relative;">
+      <div class="review-track" style="display:flex; gap:25px; width:300%; animation:reviewSlide 15s infinite linear;">
+
+        <div class="review-card" style="min-width:350px; background:#1a1a1a; padding:25px; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.4);">
+          <p style="font-size:18px;">"Best rental service in town! Car condition was perfect and delivery was super fast."</p>
+          <h4 style="margin-top:15px; color:#ff4d00;">— Rakesh</h4>
+        </div>
+
+        <div class="review-card" style="min-width:350px; background:#1a1a1a; padding:25px; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.4);">
+          <p style="font-size:18px;">"Affordable prices and clean cars. I booked Swift for 3 days — amazing experience!"</p>
+          <h4 style="margin-top:15px; color:#ff4d00;">— Meghana</h4>
+        </div>
+
+        <div class="review-card" style="min-width:350px; background:#1a1a1a; padding:25px; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.4);">
+          <p style="font-size:18px;">"Thar ride was superb! Smooth booking and friendly service. Highly recommended."</p>
+          <h4 style="margin-top:15px; color:#ff4d00;">— Akhil</h4>
+        </div>
+
+      </div>
+    </div>
+
+    <style>
+      @keyframes reviewSlide {
+        0% { transform: translateX(0); }
+        33% { transform: translateX(-33%); }
+        66% { transform: translateX(-66%); }
+        100% { transform: translateX(0); }
+      }
+    </style>
+  </section>
+
+  <section id="about" class="section" style="background:linear-gradient(135deg,#0b6cff,#00d4ff); color:#021024; padding:50px;">
+      <h2 style="color:#fff; font-size:32px; margin-bottom:10px;">About Ignite Wheels</h2>
+      <p style="color:rgba(255,255,255,0.9); max-width:900px; margin:10px auto 30px; font-size:16px;">
+        Ignite Wheels provides clean, well-maintained self-drive and chauffeur-driven cars across the city — perfect for short trips, long drives, and special occasions. Fast booking, transparent pricing, and friendly service are our promise.
+      </p>
+
+      <!-- Founder Card (Gradient Blue Theme) -->
+      <div style="max-width:1000px; margin:0 auto; display:flex; gap:30px; align-items:center; justify-content:center; flex-wrap:wrap;">
+        <div style="flex:1; min-width:260px;">
+          <!-- Animated SVG Illustration -->
+          <div style="width:100%; max-width:380px; margin:auto;">
+            <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; display:block;">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#00c6ff"/>
+                  <stop offset="100%" stop-color="#0072ff"/>
+                </linearGradient>
+                <filter id="f1" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="b"/>
+                  <feBlend in="SourceGraphic" in2="b" />
+                </filter>
+              </defs>
+
+              <circle cx="120" cy="70" r="48" fill="url(#g1)" opacity="0.95">
+                <animate attributeName="r" values="44;50;44" dur="4s" repeatCount="indefinite" />
+                <animate attributeName="cy" values="68;72;68" dur="4s" repeatCount="indefinite" />
+              </circle>
+
+              <!-- simple avatar -->
+              <g transform="translate(60,40)">
+                <ellipse cx="60" cy="120" rx="70" ry="18" fill="#ffffff09"/>
+                <rect x="28" y="44" width="64" height="48" rx="12" fill="#ffffff" opacity="0.06"/>
+                <circle cx="60" cy="60" r="28" fill="#ffffff" />
+                <circle cx="60" cy="60" r="24" fill="url(#g1)"/>
+                <g>
+                  <rect x="20" y="96" width="80" height="8" rx="4" fill="#ffffff" opacity="0.06"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div style="flex:1; min-width:260px; color:#021024;">
+          <div style="background:rgba(255,255,255,0.95); padding:20px; border-radius:12px; box-shadow:0 10px 30px rgba(2,16,36,0.15);">
+            <h3 style="margin:0 0 8px; color:#001427;">Founder</h3>
+            <h2 style="margin:0 0 12px; color:#001427;">Aishf Mohammed</h2>
+            <p style="margin:0 0 10px; color:#003246;">Contact: <a href="tel:+917093393435" style="color:#005f9e; text-decoration:none;">70933 93435</a></p>
+            <p style="margin:0; color:#003246; font-size:14px;">Building safer and more reliable rides since 2021. Reach out to discuss partnerships, corporate rentals, and long-term bookings.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="contact" class="section" style="background:#111; color:#fff; padding:50px;">
+
+    <a href="https://wa.me/910000000000" style="position:fixed; bottom:20px; right:20px; background:#25d366; color:#fff; padding:15px 18px; border-radius:50%; font-size:24px; text-decoration:none; box-shadow:0 0 10px #000;">💬</a>
+
+    <footer>
+      <p>© 2025 Ignite Wheels Car Rental | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+
+
+
